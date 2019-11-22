@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh"
+
+[deps]
+
+files=[ "res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh" ]
+
+source_file="res://assets/free3d.com/75-low-poly-buildings/low poly buildings.obj"
+dest_files=[ "res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh", "res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

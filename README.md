@@ -1,7 +1,7 @@
 Godot 360 Camera render
 =======================
 
-[[screenshot.png|screenshot]]
+![Screenshot](screenshot.png)
 
 This repository contains an example implementation of rendering a scene to a cubemap and then turning that cubemap into a panoramic image.
 

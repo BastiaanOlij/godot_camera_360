@@ -1,6 +1,8 @@
 Godot 360 Camera render
 =======================
 
+[[screenshot.png|screenshot]]
+
 This repository contains an example implementation of rendering a scene to a cubemap and then turning that cubemap into a panoramic image.
 
 Recording the output of this would produce a 360 degree video.

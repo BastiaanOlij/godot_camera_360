@@ -20,15 +20,15 @@ void fragment() {
 	if ((abs_dir.x > abs_dir.y) && (abs_dir.x > abs_dir.z)) {
 		// X is biggest, use forward
 		float ma = 0.5 / abs_dir.x;
-		vec2 uv = dir.zy * ma + 0.5;
+		vec2 uv = -dir.zy * ma + 0.5;
 		if (dir.x >= 0.0) {
-			COLOR = texture(ForwardTexture, uv);
+			COLOR = texture(BackTexture, uv);
 		} else {
-			COLOR = texture(BackTexture, vec2(1.0 - uv.x, uv.y));
+			COLOR = texture(ForwardTexture, vec2(1.0 - uv.x, uv.y));
 		}
 	} else if (abs_dir.y > abs_dir.z) {
 		// Y is biggest
-		float ma = 0.5 / abs_dir.y;
+		float ma = 0.5 / abs_dir.y * -1.0;
 		vec2 uv = dir.xz * ma + 0.5;
 		if (dir.y >= 0.0) {
 			COLOR = texture(TopTexture, uv);
@@ -37,7 +37,7 @@ void fragment() {
 		}
 	} else {
 		// Z is biggest
-		float ma = 0.5 / abs_dir.z;
+		float ma = 0.5 / abs_dir.z * -1.0;
 		vec2 uv = dir.xy * ma + 0.5;
 		if (dir.z >= 0.0) {
 			COLOR = texture(RightTexture, vec2(1.0 - uv.x, uv.y));

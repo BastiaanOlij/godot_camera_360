@@ -1,11 +1,11 @@
 extends ColorRect
 
-export (Texture) var ForwardTexture setget set_forward_texture, get_forward_texture
-export (Texture) var LeftTexture setget set_left_texture, get_left_texture
-export (Texture) var BackTexture setget set_back_texture, get_back_texture
-export (Texture) var RightTexture setget set_right_texture, get_right_texture
-export (Texture) var TopTexture setget set_top_texture, get_top_texture
-export (Texture) var BottomTexture setget set_bottom_texture, get_bottom_texture
+@export var ForwardTexture:Texture2D : get = get_forward_texture, set = set_forward_texture
+@export var LeftTexture:Texture2D : get = get_left_texture, set = set_left_texture
+@export var BackTexture:Texture2D : get = get_back_texture, set = set_back_texture
+@export var RightTexture:Texture2D : get = get_right_texture, set = set_right_texture
+@export var TopTexture:Texture2D : get = get_top_texture, set = set_top_texture
+@export var BottomTexture:Texture2D : get = get_bottom_texture, set = set_bottom_texture
 
 var is_ready = false
 
@@ -17,50 +17,50 @@ func set_from_cubemap(cubemap):
 	set_top_texture(cubemap.get_top_texture())
 	set_bottom_texture(cubemap.get_bottom_texture())
 
-func set_forward_texture(new_texture : Texture):
+func set_forward_texture(new_texture : Texture2D):
 	ForwardTexture = new_texture
 	if is_ready:
-		material.set_shader_param('ForwardTexture', ForwardTexture)
+		material.set_shader_parameter('ForwardTexture', ForwardTexture)
 
 func get_forward_texture():
 	return ForwardTexture
 
-func set_left_texture(new_texture : Texture):
+func set_left_texture(new_texture : Texture2D):
 	LeftTexture = new_texture
 	if is_ready:
-		material.set_shader_param('LeftTexture', LeftTexture)
+		material.set_shader_parameter('LeftTexture', LeftTexture)
 
 func get_left_texture():
 	return LeftTexture
 
-func set_back_texture(new_texture : Texture):
+func set_back_texture(new_texture : Texture2D):
 	BackTexture = new_texture
 	if is_ready:
-		material.set_shader_param('BackTexture', BackTexture)
+		material.set_shader_parameter('BackTexture', BackTexture)
 
 func get_back_texture():
 	return BackTexture
 
-func set_right_texture(new_texture : Texture):
+func set_right_texture(new_texture : Texture2D):
 	RightTexture = new_texture
 	if is_ready:
-		material.set_shader_param('RightTexture', RightTexture)
+		material.set_shader_parameter('RightTexture', RightTexture)
 
 func get_right_texture():
 	return RightTexture
 
-func set_top_texture(new_texture : Texture):
+func set_top_texture(new_texture : Texture2D):
 	TopTexture = new_texture
 	if is_ready:
-		material.set_shader_param('TopTexture', TopTexture)
+		material.set_shader_parameter('TopTexture', TopTexture)
 
 func get_top_texture():
 	return TopTexture
 
-func set_bottom_texture(new_texture : Texture):
+func set_bottom_texture(new_texture : Texture2D):
 	BottomTexture = new_texture
 	if is_ready:
-		material.set_shader_param('BottomTexture', BottomTexture)
+		material.set_shader_parameter('BottomTexture', BottomTexture)
 
 func get_bottom_texture():
 	return BottomTexture

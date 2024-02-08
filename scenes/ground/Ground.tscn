@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dakjlk33s1w3v"]
 
-[ext_resource path="res://scenes/ground/ground_material.tres" type="Material" id=1]
-
-[sub_resource type="PlaneMesh" id=1]
-size = Vector2( 4096, 4096 )
+[sub_resource type="PlaneMesh" id="1"]
+size = Vector2(4096, 4096)
 subdivide_width = 10
 subdivide_depth = 10
 
-[node name="Ground" type="MeshInstance"]
-mesh = SubResource( 1 )
-material/0 = ExtResource( 1 )
+[node name="Ground" type="MeshInstance3D"]
+mesh = SubResource("1")

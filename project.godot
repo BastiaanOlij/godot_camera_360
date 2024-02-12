@@ -6,19 +6,17 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
+config_version=5
 
 [application]
 
-config/name="GodotCamera360"
+config/name="Godot4Camera360"
 run/main_scene="res://Main.tscn"
+config/features=PackedStringArray("4.2")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://screenshot.png"
 config/icon="res://icon.png"
 
-[rendering]
+[filesystem]
 
-environment/default_environment="res://default_env.tres"
+import/fbx/enabled=false

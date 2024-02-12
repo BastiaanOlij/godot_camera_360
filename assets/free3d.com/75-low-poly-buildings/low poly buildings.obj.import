@@ -1,19 +1,22 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh"
+uid="uid://dai7n00k0ax3t"
+path="res://.godot/imported/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh"
 
 [deps]
 
-files=[ "res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh" ]
+files=["res://.godot/imported/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh"]
 
 source_file="res://assets/free3d.com/75-low-poly-buildings/low poly buildings.obj"
-dest_files=[ "res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh", "res://.import/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh" ]
+dest_files=["res://.godot/imported/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh", "res://.godot/imported/low poly buildings.obj-9a26007d3e37f4eb9fb4922797812af8.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true
+force_disable_mesh_compression=false

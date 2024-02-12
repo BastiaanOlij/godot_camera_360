@@ -7,3 +7,5 @@
 *.TMP
 logs
 Thumbs.db
+.godot
+.DS_Store

@@ -1,87 +1,60 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dmqfdfgg772md"]
 
-[ext_resource path="res://addons/camera360/CubeCam.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://addons/camera360/CubeCam.gd" id="1"]
 
-[node name="CubeCam" type="Spatial"]
-script = ExtResource( 1 )
+[node name="CubeCam" type="Node3D"]
+script = ExtResource("1")
 
-[node name="ForwardViewport" type="Viewport" parent="."]
-size = Vector2( 256, 256 )
-msaa = 1
+[node name="ForwardViewport" type="SubViewport" parent="."]
+size = Vector2i(256, 256)
 render_target_update_mode = 3
-shadow_atlas_size = 1024
 
-[node name="Position" type="Spatial" parent="ForwardViewport"]
+[node name="Position" type="Node3D" parent="ForwardViewport"]
 
-[node name="Camera" type="Camera" parent="ForwardViewport/Position"]
+[node name="Camera3D" type="Camera3D" parent="ForwardViewport/Position"]
 fov = 90.0
 
-[node name="LeftViewport" type="Viewport" parent="."]
-msaa = 1
+[node name="LeftViewport" type="SubViewport" parent="."]
 render_target_update_mode = 3
-shadow_atlas_size = 1024
 
-[node name="Position" type="Spatial" parent="LeftViewport"]
+[node name="Position" type="Node3D" parent="LeftViewport"]
 
-[node name="Camera" type="Camera" parent="LeftViewport/Position"]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
+[node name="Camera3D" type="Camera3D" parent="LeftViewport/Position"]
+transform = Transform3D(-1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0)
 fov = 90.0
-__meta__ = {
-"_editor_description_": ""
-}
 
-[node name="BackViewport" type="Viewport" parent="."]
-msaa = 1
+[node name="BackViewport" type="SubViewport" parent="."]
 render_target_update_mode = 3
-shadow_atlas_size = 1024
 
-[node name="Position" type="Spatial" parent="BackViewport"]
+[node name="Position" type="Node3D" parent="BackViewport"]
 
-[node name="Camera" type="Camera" parent="BackViewport/Position"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+[node name="Camera3D" type="Camera3D" parent="BackViewport/Position"]
+transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0)
 fov = 90.0
-__meta__ = {
-"_editor_description_": ""
-}
 
-[node name="RightViewport" type="Viewport" parent="."]
-msaa = 1
+[node name="RightViewport" type="SubViewport" parent="."]
 render_target_update_mode = 3
-shadow_atlas_size = 1024
 
-[node name="Position" type="Spatial" parent="RightViewport"]
+[node name="Position" type="Node3D" parent="RightViewport"]
 
-[node name="Camera" type="Camera" parent="RightViewport/Position"]
-transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0 )
+[node name="Camera3D" type="Camera3D" parent="RightViewport/Position"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
 fov = 90.0
-__meta__ = {
-"_editor_description_": ""
-}
 
-[node name="TopViewport" type="Viewport" parent="."]
-msaa = 1
+[node name="TopViewport" type="SubViewport" parent="."]
 render_target_update_mode = 3
-shadow_atlas_size = 1024
 
-[node name="Position" type="Spatial" parent="TopViewport"]
+[node name="Position" type="Node3D" parent="TopViewport"]
 
-[node name="Camera" type="Camera" parent="TopViewport/Position"]
-transform = Transform( -1.62921e-07, 1, -1.62921e-07, 0, -1.62921e-07, -1, -1, -1.62921e-07, 2.65431e-14, 0, 0, 0 )
+[node name="Camera3D" type="Camera3D" parent="TopViewport/Position"]
+transform = Transform3D(-1.62921e-07, 1, -1.62921e-07, 0, -1.62921e-07, -1, -1, -1.62921e-07, 2.65431e-14, 0, 0, 0)
 fov = 90.0
-__meta__ = {
-"_editor_description_": ""
-}
 
-[node name="BottomViewport" type="Viewport" parent="."]
-msaa = 1
+[node name="BottomViewport" type="SubViewport" parent="."]
 render_target_update_mode = 3
-shadow_atlas_size = 1024
 
-[node name="Position" type="Spatial" parent="BottomViewport"]
+[node name="Position" type="Node3D" parent="BottomViewport"]
 
-[node name="Camera" type="Camera" parent="BottomViewport/Position"]
-transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62921e-07, 2.65431e-14, 0, 0, 0 )
+[node name="Camera3D" type="Camera3D" parent="BottomViewport/Position"]
+transform = Transform3D(-1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62921e-07, 2.65431e-14, 0, 0, 0)
 fov = 90.0
-__meta__ = {
-"_editor_description_": ""
-}
